@@ -1,7 +1,7 @@
 # Tiny-APRS-LoRa-WX-station
 A project for a very low power LoRa APRS weather station<br />
 This project started on jan 17 2024.<br />
-
+<img src="" alt="image" width="300" height="auto">
 Having a few Arduino Pro Mini and SX1278 RFM95W clones laying around, and being more confident now that I have written my "Lora APRS WX station", I wanted to make a test with the Arduino board.<br />
 I also had some PCBs ordered past year that I didn't find the time to use.<br />
 
