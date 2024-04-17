@@ -10,3 +10,6 @@ It took just a few hours behind the keyboard to make a new project come to life,
 It worked so well that I worked a bit more on it and finally got a nice working project!<br />
 
 I worked to make this project VERY LOW power. Indeed does it consume only 6-7 microamperes when in sleep!!<br />
+
+More infos on my home page :
+https://www.egloff.eu/
