@@ -14,6 +14,7 @@ BME280 on pin A4 SDA & A5 SCL
 #define WITH_SEALEVELCORRECTION // if we want a pressure correction for the given altitude.
 
 const String CALLSIGN  = "TK5EP-12";  // callsign with SSID
+const String STATUS    = "Tiny LoRa APRS WX station by TK5EP"; // Status text to be sent with Status transmission
 const String LATITUDE  = "4156.94N";  // APRS latitude coordinates. Go on my map to find them htpp://egloff.eu/qralocator
 const String LONGITUDE = "00845.25E"; // APRS longitude coordinates
 const int ALTITUDE     = 60;          // altitude in meters
@@ -109,7 +110,7 @@ String buildPacket(){
  *   Builds the WX DATAS packet
  *************************************************************************/
 String buildStatus(){
-  String datas = CALLSIGN + ">APEP02,WIDE1-1:>Tiny LoRa APRS WX station by TK5EP";
+  String datas = CALLSIGN + ">APEP02,WIDE1-1:>" + STATUS;
   return datas;
 }
 
@@ -190,12 +191,6 @@ void setup() {
   LoRa.setCodingRate4(5);
   LoRa.enableCrc();
   LoRa.setTxPower(TXPOWER);
-
-  //LoRa.setSyncWord(0x34);               // 0x34 fot LoRaWan
-  //LoRa.idle();                          // set standby mode
-  //LoRa.disableInvertIQ();
-  //LoRa.sleep(); // mode 0x00 
-  //LoRa.dumpRegisters(Serial);
 
   // read the BME280 sensor
   readBME();
