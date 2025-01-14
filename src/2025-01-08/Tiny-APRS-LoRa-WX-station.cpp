@@ -293,6 +293,8 @@ void loop() {
       Serial.println(" V");
       Serial.println("Low battery detected! Stop measuring/transmitting datas.");
       Serial.flush();
+      LoRa.sleep();
+      LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF);
     }
 
     LoRa.sleep();
